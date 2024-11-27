@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Створити нове завдання</title>
+</head>
+<body>
+    <h1>Створити нове завдання</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Зберегти</button>
+    </form>
+    <a href="{% url 'task_list' %}">Повернутися до списку</a>
+</body>
+</html>
